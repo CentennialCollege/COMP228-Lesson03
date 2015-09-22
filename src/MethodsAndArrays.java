@@ -1,27 +1,27 @@
 import java.security.SecureRandom;
+import java.util.Scanner;
 
 
 public class MethodsAndArrays {
 
 	public static void main(String[] args) {
+		Game game = new Game(); // instantiates our game object
+		
+		Scanner input = new Scanner(System.in);
+		int numDice = 2; // default number of dice
+		int numSides = 6; // default number of sides
 		
 		
-
 		
-		System.out.println(rollDice(3, 6));
+		System.out.print("Enter the number of dice: ");
+		numDice = input.nextInt();
+		
+		System.out.print("Enter the number of sides: ");
+		numSides = input.nextInt();
+		
+		System.out.printf("You rolled %d%n",game.rollDice(numDice, numSides));
 	}
 	
-	public static int rollDice(int numDice, int numSides) {
-		SecureRandom generateRandom = new SecureRandom();
-		int result = 0;
-
-		
-		for(int index=0; index <= numDice-1; index++) {
-			result += generateRandom.nextInt(numSides) + 1;
-		}
-		
-		
-		return result;
-	}
+	
 
 }
