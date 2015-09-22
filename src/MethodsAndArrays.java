@@ -1,14 +1,27 @@
+import java.security.SecureRandom;
+
 
 public class MethodsAndArrays {
 
 	public static void main(String[] args) {
-		long myLongVariable = 100000L;
-		int myIntVariable;
+		
+		
 
 		
-		myIntVariable = (int) myLongVariable;
+		System.out.println(rollDice(3, 6));
+	}
+	
+	public static int rollDice(int numDice, int numSides) {
+		SecureRandom generateRandom = new SecureRandom();
+		int result = 0;
+
 		
-		System.out.println(myIntVariable);
+		for(int index=0; index <= numDice-1; index++) {
+			result += generateRandom.nextInt(numSides) + 1;
+		}
+		
+		
+		return result;
 	}
 
 }
