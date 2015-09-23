@@ -1,17 +1,18 @@
-import java.security.SecureRandom;
+
 import java.util.Scanner;
 
 
 public class MethodsAndArrays {
-
+	
 	public static void main(String[] args) {
+		
 		Game game = new Game(); // instantiates our game object
+
 		
 		Scanner input = new Scanner(System.in);
-		int numDice = 2; // default number of dice
-		int numSides = 6; // default number of sides
-		
-		
+		int numDice;
+		int numSides;
+	
 		
 		System.out.print("Enter the number of dice: ");
 		numDice = input.nextInt();

@@ -2,7 +2,7 @@ import java.security.SecureRandom;
 
 
 public class Game {
-		
+	
 		// CONSTRUCTOR ++++++++++++++++++++++++++++++++++++++
 		public Game() {
 		
